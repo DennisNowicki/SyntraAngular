@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-customer',
+  selector: 'nasa-customers',
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
