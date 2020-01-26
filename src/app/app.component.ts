@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'syntraAngular';
+  title : string;
+  name : string;
+
+  constructor() {
+    this.title = 'Nasa fake client database';
+    this.name = 'Dennis';
+  }
 }
