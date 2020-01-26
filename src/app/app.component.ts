@@ -9,20 +9,30 @@ import { Country } from './shared/model/country.model';
 export class AppComponent implements OnInit {
   title: string;
   name: string;
-
+  showCountries: boolean;
+  toggleMsg: string;
   countries: Country[];
 
-  constructor() {}
-
-  ngOnInit() {
-    this.title = 'Nasa fake client database';
-    this.name = 'Dennis';
+  constructor() {
     this .countries = [
       new Country(1, 'Belgium', 'Europe'),
       new Country(2, 'US', 'America'),
       new Country(3, 'Japan', 'Asia'),
       new Country(4, 'Brazil', 'America')
     ];
+  }
 
+  ngOnInit() {
+    this.title = 'Nasa fake client database';
+    this.name = 'Dennis';
+    this.showCountries = true;
+    this.toggleMsg = 'Hide list of countries';
+  }
+
+  toggleCountries() {
+    this.showCountries
+      ? this.toggleMsg = 'Show list of countries'
+      : this.toggleMsg = 'Hide list of countries';
+    this.showCountries = !this.showCountries;
   }
 }
