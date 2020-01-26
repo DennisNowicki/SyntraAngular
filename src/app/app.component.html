@@ -8,7 +8,7 @@
 <hr>
 
 <div class="container">
-  <h3>Actieve landen</h3>
+  <h3>Active countries</h3>
   <input type="button" (click)='toggleCountries()' value="Show/Hide" class="btn btn-outline-warning"> {{ toggleMsg }}
   <ul class="list-group" *ngIf='showCountries'>
     <li class="list-group-item" *ngFor="let country of countries">
@@ -18,3 +18,11 @@
   </ul>
 </div>
 
+<hr>
+
+<div class="container">
+  <h3>Add country</h3>
+  <input type="text" class="form-control-lg" placeholder="Country name" #nameCountry>
+  <input type="text" class="form-control-lg" placeholder="Continent name" #continentCountry>
+  <button class="btn btn-outline-success" (click)='addCountry(nameCountry.value, continentCountry.value)'>Add country</button>
+</div>

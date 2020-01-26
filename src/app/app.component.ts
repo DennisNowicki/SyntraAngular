@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   countries: Country[];
 
   constructor() {
-    this .countries = [
+    this.countries = [
       new Country(1, 'Belgium', 'Europe'),
       new Country(2, 'US', 'America'),
       new Country(3, 'Japan', 'Asia'),
@@ -34,5 +34,9 @@ export class AppComponent implements OnInit {
       ? this.toggleMsg = 'Show list of countries'
       : this.toggleMsg = 'Hide list of countries';
     this.showCountries = !this.showCountries;
+  }
+
+  addCountry(name: string, continent: string) {
+    this.countries.push(new Country((this.countries.length + 1), name , continent ));
   }
 }
