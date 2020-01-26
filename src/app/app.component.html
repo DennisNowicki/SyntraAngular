@@ -11,6 +11,7 @@
   <h3>Actieve landen</h3>
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let country of countries">
+      <p *ngIf='country.continent === "America"'>This is situated in the continent America!</p>
       {{ country.id }} - {{ country.name }} - {{ country.continent }}
     </li>
   </ul>

@@ -19,9 +19,9 @@ export class AppComponent implements OnInit {
     this.name = 'Dennis';
     this .countries = [
       new Country(1, 'Belgium', 'Europe'),
-      new Country(2, 'US', 'North-America'),
+      new Country(2, 'US', 'America'),
       new Country(3, 'Japan', 'Asia'),
-      new Country(4, 'Brazil', 'South-America')
+      new Country(4, 'Brazil', 'America')
     ];
 
   }
