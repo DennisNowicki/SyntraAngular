@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Country } from './shared/model/country.model';
+import { CountryService } from './shared/services/country.service';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,8 @@ export class AppComponent implements OnInit {
   toggleMsg: string;
   countries: Country[];
 
-  constructor() {
-    this.countries = [
-      new Country(1, 'Belgium', 'Europe'),
-      new Country(2, 'US', 'America'),
-      new Country(3, 'Japan', 'Asia'),
-      new Country(4, 'Brazil', 'America')
-    ];
+  constructor(private countryService: CountryService) {
+
   }
 
   ngOnInit() {
@@ -27,6 +23,7 @@ export class AppComponent implements OnInit {
     this.name = 'Dennis';
     this.showCountries = true;
     this.toggleMsg = 'Hide list of countries';
+    this.countries = this.countryService.getCountries();
   }
 
   toggleCountries() {
@@ -37,6 +34,6 @@ export class AppComponent implements OnInit {
   }
 
   addCountry(name: string, continent: string) {
-    this.countries.push(new Country((this.countries.length + 1), name , continent ));
+    this.countryService.addCountry(name, continent);
   }
 }
