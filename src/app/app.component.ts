@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Country } from './shared/model/country.model';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,19 @@ export class AppComponent implements OnInit {
   title: string;
   name: string;
 
-  countries: string[];
+  countries: Country[];
 
   constructor() {}
 
   ngOnInit() {
     this.title = 'Nasa fake client database';
     this.name = 'Dennis';
-    this .countries = [ 'US' , 'Belgium' , 'Mozambique' , 'Antartica' ];
+    this .countries = [
+      new Country(1, 'Belgium', 'Europe'),
+      new Country(2, 'US', 'North-America'),
+      new Country(3, 'Japan', 'Asia'),
+      new Country(4, 'Brazil', 'South-America')
+    ];
 
   }
 }
