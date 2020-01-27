@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Belgium",
+    "continent": "Europe"
+  },
+  {
+    "id": 2,
+    "name": "US",
+    "continent": "America"
+  },
+  {
+    "id": 3,
+    "name": "China",
+    "continent": "Asia"
+  },
+  {
+    "id": 4,
+    "name": "Japan",
+    "continent": "Asia"
+  }
+]
